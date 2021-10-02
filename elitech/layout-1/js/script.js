@@ -1,12 +1,21 @@
-function gerarCodigoFonte(){
-    const form = document.querySelector('.form');
-    let botao = form.querySelector('#btn-reset');
+//Global
 
+//Trazendo o formulário
+const form = document.querySelector('.form');
+
+//Trazendo o botão do tipo "RESET"
+let botao = form.querySelector('#btn-reset'); 
+
+//Trazendo a caixa de texto (vinculando um elemento html de id cod a uma variável chamada caixaDeTexto)
+let caixaDeTexto = document.getElementById('cod');   
+
+function gerarCodigoFonte(){
+    
     
     function recebeEventoForm(evento){
         
         //Alterando o texto do botão de Copiar
-        botao.innerHTML = `Copiar código-fonte`;
+        botao.innerHTML = `Copiar`;
         
         //Selecionando os componentes do html
 
@@ -167,7 +176,51 @@ function gerarCodigoFonte(){
         
       </section>`;
 
-      const codigoCss = `/*********GLOBAL********/
+        //Definindo o valor da variável codigoFonte no elemento html textarea (adicionando o valor da variável na página)
+        caixaDeTexto.innerHTML = codigoFonte;
+
+        //Prevenir que a página recarregue quando o formulário for enviado
+        evento.preventDefault();
+    }
+
+    //Escutando o evento de enviar o formumlário
+    form.addEventListener('submit', recebeEventoForm);
+
+    //Escutando o evento de resetar o formulário
+    form.addEventListener('reset',copiarTexto);
+    function copiarTexto(evento) {
+       
+        //Impedindo o formulário de recarregar
+        evento.preventDefault();
+        // pegando o elemento
+        let copyText = document.getElementById("cod");
+      
+        // Selecionando todo o texto dentro do textarea
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); //Se for mobile, isso vai ajudar
+      
+        //Copiando o conteúdo selecionado
+        document.execCommand("copy");
+
+        //Avisando que foi copiado
+        //alert('Copiado!');
+
+        //Limpando a caixa após copiar
+        caixaDeTexto.innerHTML= "";
+        
+        //Alterando o texto do botão de Copiar
+        botao.innerHTML = `Copiado!`;
+      };
+}
+gerarCodigoFonte();
+
+function mostrarCSS(){
+    //Alterando o texto do botão de Copiar
+    botao.innerHTML = `Copiar`;
+    caixaDeTexto.innerHTML = codigoCss;    
+};
+
+const codigoCss = `/*********GLOBAL********/
 
       @media(max-width: 1280px) {
         .perso-large-10 {
@@ -383,45 +436,3 @@ function gerarCodigoFonte(){
           margin: 0 0 16px 0;
         }
       }`;
-
-        //Definindo o valor da variável codigoFonte no elemento html textarea (adicionando o valor da variável na página)
-        caixaDeTexto.innerHTML = codigoFonte;
-
-        //Prevenir que a página recarregue quando o formulário for enviado
-        evento.preventDefault();
-    }
-
-    //Escutando o evento de enviar o formumlário
-    form.addEventListener('submit', recebeEventoForm);
-
-    //Escutando o evento de resetar o formulário
-    form.addEventListener('reset',copiarTexto);
-    function copiarTexto(evento) {
-       
-        //Impedindo o formulário de recarregar
-        evento.preventDefault();
-        // pegando o elemento
-        let copyText = document.getElementById("cod");
-      
-        // Selecionando todo o texto dentro do textarea
-        copyText.select();
-        copyText.setSelectionRange(0, 99999); //Se for mobile, isso vai ajudar
-      
-        //Copiando o conteúdo selecionado
-        document.execCommand("copy");
-
-        //Avisando que foi copiado
-        //alert('Copiado!');
-
-        //Limpando a caixa após copiar
-        caixaDeTexto.innerHTML= "";
-        
-        //Alterando o texto do botão de Copiar
-        botao.innerHTML = `Copiado!`;
-
-      }
-}
-gerarCodigoFonte();
-
-//vinculando um elemento html de id cod a uma variável chamada caixaDeTexto
-let caixaDeTexto = document.getElementById('cod');
