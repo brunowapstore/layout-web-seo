@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de conteúdo | Ortopé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="icon" sizes="192x192" href="https://www.webart.com.br/img/favicon.svg?new">
+</head>
+<body>
+        <!-- TOPO -->
+        <div class="small-12 large-flex-child-shrink columns text-center p-2 bg-light border">
+            <img class="topoSite-logo p-3" src="https://www.webart.com.br/img/logos/web-logo-toopo.svg" alt="">
+            <img class="topoSite-logo" src="https://www.ortope.com.br/tema/ortope-vue-old/dist/img/logo-rodape.b0561427.png" alt="" width="6%" height="8%">
+        </div>
+        <!-- FIM TOPO-->
+
+    <form action="" id="formulario" class="form p-3" method="get">
+        <div class="container">
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-titulo-imagem-tab" data-bs-toggle="pill" data-bs-target="#v-pills-titulo-imagem" type="button" role="tab" aria-controls="v-pills-titulo-imagem" aria-selected="true">Título e imagem</button>
+                    <button class="nav-link" id="v-pills-primeiro-bloco-tab" data-bs-toggle="pill" data-bs-target="#v-pills-primeiro-bloco" type="button" role="tab" aria-controls="v-pills-primeiro-bloco" aria-selected="false">Primeiro Bloco</buttona>
+                    <button class="nav-link" id="v-pills-segundo-bloco-tab" data-bs-toggle="pill" data-bs-target="#v-pills-segundo-bloco" type="button" role="tab" aria-controls="v-pills-segundo-bloco" aria-selected="false">Segundo Bloco</buttona>
+                    <button class="nav-link" id="v-pills-terceiro-bloco-tab" data-bs-toggle="pill" data-bs-target="#v-pills-terceiro-bloco" type="button" role="tab" aria-controls="v-pills-terceiro-bloco" aria-selected="false">Terceiro Bloco</button>
+                    <button class="nav-link" id="v-pills-quarto-bloco-tab" data-bs-toggle="pill" data-bs-target="#v-pills-quarto-bloco" type="button" role="tab" aria-controls="v-pills-quarto-bloco" aria-selected="false">Quarto Bloco</button>                    
+                </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-titulo-imagem" role="tabpanel" aria-labelledby="v-pills-titulo-imagem-tab"><br>
+                    <input class="form-control" type="text" name="" id="tituloGeral" placeholder="Título"><br>                    
+                    <div class="row">
+                    <div class="col-6">
+                        <input class="form-control" type="text" name="" id="imagemTituloDesktop" placeholder="URL da imagem do título desktop"><br>
+                    </div>
+                    <div class="col-6">
+                        <input class="form-control" type="text" name="" id="altImagemTituloDesktop" placeholder="Atributo alt da imagem do título desktop"><br>
+                    </div>
+                    <div class="col-6">
+                        <input class="form-control" type="text" name="" id="imagemTituloMobile" placeholder="URL da imagem do título mobile"><br>
+                    </div>
+                    <div class="col-6">
+                        <input class="form-control" type="text" name="" id="altImagemTituloMobile" placeholder="Atributo alt da imagem do título mobile"><br>
+                    </div>
+                    <div class="col-6">
+                        <textarea class="form-control" name="" id="textoTitulo" cols="60" rows="8" placeholder="Texto do título"></textarea><br>                            
+                    </div>
+                    <div class="col-6">                            
+                        <img src="img/titulo-imagem.png" width="100%" height="90%"><br>
+                    </div>
+                </div>
+                </div>                
+                <div class="tab-pane fade" id="v-pills-primeiro-bloco" role="tabpanel" aria-labelledby="v-pills-primeiro-bloco-tab">
+                    <div class="row">
+                        <div class="col-12">
+                            <input class="form-control" type="text" name="" id="tituloPrimeiroBloco" placeholder="Título do primeiro bloco"><br>
+                            
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="" id="imagemPrimeiroBloco" placeholder="URL da imagem"><br>
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control" type="text" name="" id="altImagemPrimeiroBloco" placeholder="Alt da imagem"><br>
+                        </div>
+                        <div class="col-8">
+                            <textarea class="form-control" name="" id="textoPrimeiroBloco" cols="60" rows="8" placeholder="Texto do primeiro bloco"></textarea><br>                            
+                        </div>
+                        <div class="col-4">                            
+                            <img src="img/primeiro-bloco.png" width="100%" height="90%"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-segundo-bloco" role="tabpanel" aria-labelledby="v-pills-segundo-bloco-tab"><div class="row">
+                    <div class="col-12">
+                        <input class="form-control" type="text" name="" id="tituloSegundoBloco" placeholder="Título do segundo bloco"><br>
+                    </div>                    
+                    <div class="col-6">                                    
+                        <input class="form-control" type="text" name="" id="imagemSegundoBloco" placeholder="URL da imagem"><br>                        
+                    </div>
+                    <div class="col-6">
+                        <input class="form-control" type="text" name="" id="altImagemSegundoBloco" placeholder="Alt da imagem"><br>
+                    </div>
+                <div class="col-6">
+                    <textarea class="form-control" name="" id="textoSegundoBloco" cols="60" rows="8" placeholder="Texto do segundo bloco"></textarea><br>
+                </div>
+                <div class="col-6">                            
+                    <img src="img/segundo-bloco.png" width="100%" height="90%"><br>
+                </div>
+            </div></div>
+            <div class="tab-pane fade" id="v-pills-terceiro-bloco" role="tabpanel" aria-labelledby="v-pills-terceiro-bloco-tab"><div class="row">
+                <div class="col-12">
+                    <input class="form-control" type="text" name="" id="tituloTerceiroBloco" placeholder="Título do terceiro bloco"><br>                    
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="" id="imagemTerceiroBloco" placeholder="URL da imagem"><br>
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="" id="altImagemTerceiroBloco" placeholder="Alt da imagem"><br>
+                </div>
+                <div class="col-6">
+                    <textarea class="form-control" name="" id="textoTerceiroBloco" cols="60" rows="8" placeholder="texto do terceiro bloco"></textarea><br>
+                </div>
+                <div class="col-6">                            
+                    <img src="img/terceiro-bloco.png" width="100%" height="90%"><br>
+                </div>
+            </div></div>
+            <div class="tab-pane fade" id="v-pills-quarto-bloco" role="tabpanel" aria-labelledby="v-pills-quarto-bloco-tab"><div class="row">
+                <div class="col-12">
+                    <input class="form-control" type="text" name="" id="tituloQuartoBloco" placeholder="Título do quarto bloco"><br>                    
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="" id="imagemQuartoBloco" placeholder="URL da imagem"><br>
+                </div>
+                <div class="col-6">
+                    <input class="form-control" type="text" name="" id="altImagemQuartoBloco" placeholder="Alt da imagem"><br>
+                </div>
+                <div class="col-6">
+                    <textarea class="form-control" name="" id="textoQuartoBloco" cols="60" rows="8" placeholder="texto do quarto bloco"></textarea><br>
+                </div>
+                <div class="col-6">                            
+                    <img src="img/quarto-bloco.png" width="100%" height="85%"><br>
+                </div>
+            </div></div>            
+        </div>
+    </div>
+    <button type="submit"class="btn btn-success">Gerar código-fonte</button>
+   <button type="reset" class="btn btn-warning" id="btn-reset">Copiar código-fonte</button>
+
+    <textarea class="form-control" readonly name="cod" id="cod" cols="30" rows="10"></textarea>
+</div>
+</form>
+
+<!-- Rodapé -->
+<div class="small-12 large-flex-child-shrink columns text-center p-2 bg-light border">
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>       
+</body>
+</html>
