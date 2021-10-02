@@ -13,6 +13,7 @@ function gerarCodigoFonte(){
         //pegando os valores do titulo
         const tituloGeral = form.querySelector('#tituloGeral').value;
         const imagemTitulo = form.querySelector('#imagemTitulo').value;
+        const altImagemTitulo = form.querySelector('#altImagemTitulo').value
 
         //pegando valores do primeiro bloco
         const tituloPrimeiroBloco = form.querySelector('#tituloPrimeiroBloco').value;
@@ -45,7 +46,7 @@ function gerarCodigoFonte(){
         <img class="img-header" src="${imagemTitulo}" alt="Ilha para congelados" /></section>
         <div class="invisible-holder">
         <section class="product-info-with-image">
-        <div class="block-right"><img class="img-block" src="${imagemPrimeiroBloco}" alt="Ilha para congelados" /></div>
+        <div class="block-right"><img class="img-block" src="${imagemPrimeiroBloco}" alt="${altImagemTitulo}" /></div>
         <div class="block-left">
         <h3>${tituloPrimeiroBloco}</h3>
         <p>${textoPrimeiroBloco}</p>
