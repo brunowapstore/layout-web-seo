@@ -16,7 +16,7 @@ function gerarCodigoFonte(){
         const imagemTituloMobile = form.querySelector('#imagemTituloMobile').value;
         const altImagemTituloDesktop = form.querySelector('#altImagemTituloDesktop').value
         const altImagemTituloMobile = form.querySelector('#altImagemTituloMobile').value;
-        const textoTitulo = form.querySelector('#textoTitulo');        
+        const textoTitulo = form.querySelector('#textoTitulo').value;        
 
         //pegando valores do primeiro bloco
         const tituloPrimeiroBloco = form.querySelector('#tituloPrimeiroBloco').value;
